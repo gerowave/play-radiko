@@ -203,7 +203,7 @@ class RadikoHLS:
 
     from_time = datetime.datetime.strftime(from_time, '%Y-%m-%d-%H:%M')
     to___time = datetime.datetime.strftime(to___time, '_%H:%M')
-    output = f'{channel}_{from_time}{to___time}.aac'
+    output = f'{channel}_{from_time}{to___time}.m4a'
 
     return output
 

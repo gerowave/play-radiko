@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # coding:utf-8
 # vim: expandtab nowrap ts=2 sw=2 sts=2
 
@@ -25,16 +25,26 @@ def main():
   parser.add_argument('-d', '--duration',default='1800' , help='再生（録音）時間', type=int)
   parser.add_argument('-o', '--output'  , help='保存先',nargs='?', default=None,const='')
   parser.add_argument('--no-play-live',action='store_const',default=False,const=True, help='再生しない')
+  parser.add_argument('--ft', help='開始日時分秒')
+  parser.add_argument('--to', help='終了日時分秒')
   
   
   args = parser.parse_args()
   channel  = vars(args)['channel_name'].upper()
   duration = vars(args)['duration']
+  ft = vars(args)['ft']
+  to = vars(args)['to']
   #
   #radiko = Radiko()
   radiko = RadikoHLS()
 
 
+  ##
+  if vars(args)['ft'] != None :
+    print('timeshift...')
+    f_out = vars(args)['output']
+    radiko.save_radiko_timefree(channel, ft, to, output=f_out)
+    exit()
 
   ## 
   if vars(args)['no_play_live'] == True :
