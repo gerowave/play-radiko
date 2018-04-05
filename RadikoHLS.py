@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 
 
@@ -201,9 +201,13 @@ class RadikoHLS:
     from_time = datetime.datetime.fromtimestamp(from_time)
     to___time = datetime.datetime.fromtimestamp(to___time)
 
-    from_time = datetime.datetime.strftime(from_time, '%Y-%m-%d-%H:%M')
+#    from_time = datetime.datetime.strftime(from_time, '%Y-%m-%d-%H:%M')
+#    to___time = datetime.datetime.strftime(to___time, '_%H:%M')
+#    output = f'{channel}_{from_time}{to___time}.m4a'
+#
+    from_time = datetime.datetime.strftime(from_time, '%Y%m%d-%H%M')
     to___time = datetime.datetime.strftime(to___time, '_%H:%M')
-    output = f'{channel}_{from_time}{to___time}.m4a'
+    output = f'{from_time}_{channel}.m4a'
 
     return output
 
