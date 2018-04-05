@@ -52,6 +52,14 @@ omxplauer -o auto  # raspi default
 
 usage examples.
 
+#### Example 00:
+Save Radiko TimeFree InterFM from 2018-04-04 18:00 to 2018-04-04 18:05
+```
+./play_radiko.py INT --ft 201804041800 --to 201804041805
+```
+
+[Not Tested Below. Perhaps may not work.]
+
 #### Example 01:
 Play radiko abc 1008 from osaka  for 1 hour 
 ```
