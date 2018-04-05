@@ -54,6 +54,7 @@ usage examples.
 
 #### Example 00:
 Save Radiko TimeFree InterFM from 2018-04-04 18:00 to 2018-04-04 18:05
+( as '20180404-1800_INT.m4a'.)
 ```
 ./play_radiko.py INT --ft 201804041800 --to 201804041805
 ```
