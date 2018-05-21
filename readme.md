@@ -4,6 +4,10 @@
 ./play_radko.py abc 3600
 ```
 
+```
+./play_radko_timefree.py abc  -d 3600 -f '2017-09-18 12:00'
+```
+
 ### requirements
 
 - Python 3.6 newer -- for f'' string
@@ -59,13 +63,12 @@ Save Radiko TimeFree InterFM from 2018-04-04 18:00 to 2018-04-04 18:05
 ./play_radiko.py INT --ft 201804041800 --to 201804041805
 ```
 
-[本来タイムフリー用のコマンドをければ済む話だったのを下手にいじったせいで元のコマンドが動かなくなっちまったよ。やべえ。]
-
 #### Example 01:
 Play radiko abc 1008 from osaka  for 1 hour 
 ```
 ./play_radko.py abc 3600
 ```
+
 #### Example 02:
 Play radiko TimeFree abc 1008 from 2017-09-18 12:00 to 3600
 ```
